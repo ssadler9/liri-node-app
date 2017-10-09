@@ -1,8 +1,17 @@
 // make it so liri.js can take in one of the following commands:
-
 // spotify-this-song
 // movie-this
 // do-what-it-says
+
+
+// =============
+// things to do to complete homework:
+// Switch case to handle arguments in command line to display correct information
+// magically crack into the spotify object returned...
+// figure out magically the random.txt file to work
+// =============
+
+
 
 var keys = require('./keys.js');
 var Twitter = require('twitter');
@@ -25,9 +34,6 @@ client.get('statuses/user_timeline', params, function(error, tweets, response) {
                     }
             }
         });
-// Switch case to take in the correct commandline entry
-
-
 
 // spotify code to display artists, song name, preview link, album
 var spotify = new spotify({
@@ -91,3 +97,4 @@ request(queryUrl, function(error, response, body) {
     console.log('Actors: ' + JSON.parse(body).Actors);
   }
 });
+

@@ -25,6 +25,10 @@ client.get('statuses/user_timeline', params, function(error, tweets, response) {
                     }
             }
         });
+// Switch case to take in the correct commandline entry
+
+
+
 // spotify code to display artists, song name, preview link, album
 var spotify = new spotify({
   id: '94ba0b139cec4db58ce7a7d7729099a8',
@@ -34,6 +38,7 @@ var spotify = new spotify({
 spotify.search({ type: 'track', query: 'crash into me' }, function(error, data) {
     if ( error ) {
         console.log('Error occurred: ' + error);
+        console.log(data.tracks.items[0].artists[0].name);
         return;
     }
 var getArtistNames = function(artist) {
